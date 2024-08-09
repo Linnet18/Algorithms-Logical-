@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int num1,num2;
+        double chk;
+        num1=sc.nextInt();
+        num2=sc.nextInt();
+        for(int i=num1;i<=num2;i++)
+        {
+            chk=Math.sqrt(i);
+            if(chk%1==0)
+            {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
