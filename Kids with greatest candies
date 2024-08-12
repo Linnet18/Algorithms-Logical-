@@ -1,0 +1,36 @@
+class Solution {
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+        int len=candies.length;
+        int extracandies[]=new int[len];
+        for(int i=0;i<len;i++)
+        {
+            extracandies[i]=candies[i]+extraCandies;
+        }
+        //int min=extracandies[0];
+        List<Boolean> extra=new ArrayList<Boolean>();
+        //Collections.fill(extra,Boolean.FALSE);
+        for(int i=0;i<len;i++)
+        {
+            int EC=extracandies[i];
+            int f=0;
+            for(int j=0;j<len;j++)
+            {
+                
+                if(EC>=candies[j])
+                {
+                    f=1;
+                }
+                else
+                {
+                    f=0;
+                    break;
+                }
+            }
+            if(f==1)
+            extra.add(true);
+            else
+            extra.add(false);
+        }
+        return extra;
+    }
+}
